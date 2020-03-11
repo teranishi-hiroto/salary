@@ -34,7 +34,7 @@ public class EmployeeValidator {
     private static String _validateCode(String code, Boolean code_duplicate_check_flag) {
         // 必須入力チェック
         if(code == null || code.equals("")) {
-            return "社員番号を入力してください。";
+            return "IDを入力してください。";
         }
 
         // すでに登録されている社員番号との重複チェック
@@ -43,7 +43,7 @@ public class EmployeeValidator {
             long employees_count = (long)em.createNamedQuery("checkRegisteredCode", Long.class).setParameter("code", code).getSingleResult();
             em.close();
             if(employees_count > 0) {
-                return "入力された社員番号の情報はすでに存在しています。";
+                return "入力されたIDの情報はすでに存在しています。";
             }
         }
 

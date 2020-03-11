@@ -11,7 +11,7 @@
         <table id="employee_list">
             <tbody>
                 <tr>
-                    <th>社員番号</th>
+                    <th>ID</th>
                     <th>氏名</th>
                     <th>操作</th>
                 </tr>

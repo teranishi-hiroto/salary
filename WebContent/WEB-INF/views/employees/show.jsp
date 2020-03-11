@@ -10,7 +10,7 @@
                 <table>
                     <tbody>
                         <tr>
-                            <th>社員番号</th>
+                            <th>ID</th>
                             <td><c:out value="${employee.code}" /></td>
                         </tr>
                         <tr>
