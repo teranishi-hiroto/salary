@@ -22,9 +22,9 @@
                     <tr class="row${status.count % 2}">
                         <td class="salary_date"><fmt:formatDate value='${salary.job_date}' pattern='yyyy-MM-dd' /></td>
                         <td class="shop_name">${salary.shop_name}</td>
-                        <td class="salary_hour">${salary.hour}</td>
-                        <td class="salary_wage">${salary.hourly_wage}</td>
-                        <td class="salary_result">${salary.result}</td>
+                        <td class="salary_hour">${salary.hour}時間</td>
+                        <td class="salary_wage">${salary.hourly_wage}円</td>
+                        <td class="salary_result">${salary.hour * salary.hourly_wage}円</td>
                     </tr>
                 </c:forEach>
             </tbody>
