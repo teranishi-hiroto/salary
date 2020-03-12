@@ -16,6 +16,7 @@
                     <th class="shop_name">店名</th>
                     <th class="salary_hour">勤務時間</th>
                     <th class="salary_wage">時給</th>
+                    <th class="salary_result">給料</th>
                 </tr>
                 <c:forEach var="salary" items="${salaries}" varStatus="status">
                     <tr class="row${status.count % 2}">
@@ -23,6 +24,7 @@
                         <td class="shop_name">${salary.shop_name}</td>
                         <td class="salary_hour">${salary.hour}</td>
                         <td class="salary_wage">${salary.hourly_wage}</td>
+                        <td class="salary_result">${salary.result}</td>
                     </tr>
                 </c:forEach>
             </tbody>
@@ -41,7 +43,7 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/salary/new' />">新規バイトの登録</a></p>
+        <p><a href="<c:url value='/salary/new' />">出勤日の追加</a></p>
 
     </c:param>
 </c:import>

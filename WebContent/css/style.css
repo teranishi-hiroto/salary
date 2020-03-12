@@ -140,19 +140,23 @@ table#salary_list th {
 }
 
 table#salary_list .salary_date {
-    width: 25%;
+    width: 20%;
     padding: 10px 2%;
 }
 table#salary_list .shop_name {
-    width: 35%;
+    width: 25%;
 }
 
 table#salary_list .salary_hour {
-    width: 20%;
+    width: 15%;
 }
 
 table#salary_list .salary_wage {
-    width: 20%;
+    width: 15%;
+}
+
+table#salary_list .salary_result {
+    width: 25%;
 }
 
 pre {
