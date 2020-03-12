@@ -26,5 +26,9 @@
 <input type="number" name="wage" value="${salary.hourly_wage}" />
 <br /><br />
 
+<%-- <label for="content">メモ</label><br />
+<textarea name="content" rows="10" cols="50">${salary.content}</textarea>
+<br /><br /> --%>
+
 <input type="hidden" name="_token" value="${_token}" />
 <button type="submit">追加</button>

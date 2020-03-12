@@ -23,10 +23,10 @@ import javax.persistence.Table;
             name = "getSalariesCount",
             query = "SELECT COUNT(s) FROM Salary AS s"
             ),
-//    @NamedQuery(
-//            name = "getMonthSalary",
-//            query = "SELECT s FROM Salary AS s  WHERE s.job_date BETWEEN {d '2020-3-1'}AND{d '2020-3-31'}"
-//            ),
+    @NamedQuery(
+            name = "getMonth",
+            query = "SELECT s FROM Salary AS s  WHERE s.job_date BETWEEN :startdate AND :enddate"
+          )
 })
 @Entity
 public class Salary {
@@ -50,6 +50,10 @@ public class Salary {
 
     @Column(name = "hourly_wage", nullable = false)
     private Integer hourly_wage;
+
+//    @Lob
+//    @Column(name = "content")
+//    private String content;
 
     public Integer getId() {
         return id;
@@ -98,5 +102,13 @@ public class Salary {
     public void setHourly_wage(Integer hourly_wage) {
         this.hourly_wage = hourly_wage;
     }
+
+//    public String getContent() {
+//        return content;
+//    }
+//
+//    public void setContent(String content) {
+//        this.content = content;
+//    }
 
 }

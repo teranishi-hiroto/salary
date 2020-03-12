@@ -8,7 +8,7 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>給料 一覧</h2>
+        <h2>月別 一覧</h2>
         <table id="salary_list">
             <tbody>
                 <tr>
@@ -43,7 +43,5 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/salary/new' />">出勤日の追加</a></p>
-
     </c:param>
 </c:import>
