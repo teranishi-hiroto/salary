@@ -72,7 +72,7 @@ public class SalaryCreateServlet extends HttpServlet {
                 em.close();
                 request.getSession().setAttribute("flush", "追加が完了しました。");
 
-                response.sendRedirect(request.getContextPath() + "/salary/index");
+                response.sendRedirect(request.getContextPath() + "/index.html");
             }
         }
     }

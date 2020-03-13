@@ -42,6 +42,12 @@ public class SalaryIndexServlet extends HttpServlet {
         } catch(Exception e) {
             page = 1;
         }
+
+        List<Salary> month = em.createNamedQuery("getMonth", Salary.class)
+                .setParameter("startDate",  2020-3-1)
+                .setParameter("endDate", 2020-3-31)
+                .getResultList();
+
         List<Salary> salaries = em.createNamedQuery("getAllSalaries", Salary.class)
                                   .setFirstResult(15 * (page - 1))
                                   .setMaxResults(15)
@@ -52,6 +58,7 @@ public class SalaryIndexServlet extends HttpServlet {
 
         em.close();
 
+        request.setAttribute("month", month);
         request.setAttribute("salaries", salaries);
         request.setAttribute("salaries_count", salaries_count);
         request.setAttribute("page", page);

@@ -12,18 +12,12 @@
         <table id="salary_list">
             <tbody>
                 <tr>
-                    <th class="salary_date">日付</th>
-                    <th class="shop_name">店名</th>
-                    <th class="salary_hour">勤務時間</th>
-                    <th class="salary_wage">時給</th>
-                    <th class="salary_result">給料</th>
+                    <th class="month">日付</th>
+                    <th class="shop_name">給料</th>
                 </tr>
                 <c:forEach var="salary" items="${salaries}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                        <td class="salary_date"><fmt:formatDate value='${salary.job_date}' pattern='yyyy-MM-dd' /></td>
-                        <td class="shop_name">${salary.shop_name}</td>
-                        <td class="salary_hour">${salary.hour}時間</td>
-                        <td class="salary_wage">${salary.hourly_wage}円</td>
+                        <td class="month"><c:out value="${month}" /></td>
                         <td class="salary_result">${salary.hour * salary.hourly_wage}円</td>
                     </tr>
                 </c:forEach>

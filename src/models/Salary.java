@@ -25,7 +25,7 @@ import javax.persistence.Table;
             ),
     @NamedQuery(
             name = "getMonth",
-            query = "SELECT s FROM Salary AS s  WHERE s.job_date BETWEEN :startdate AND :enddate"
+            query = "SELECT s FROM Salary AS s  WHERE s.job_date BETWEEN :startDate AND :endDate"
           )
 })
 @Entity
