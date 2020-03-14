@@ -12,8 +12,8 @@
         <table id="salary_list">
             <tbody>
                 <tr>
-                    <th class="month">日付</th>
-                    <th class="shop_name">給料</th>
+                    <th class="month">年月</th>
+                    <th class="salary_result">給料</th>
                 </tr>
                 <c:forEach var="salary" items="${salaries}" varStatus="status">
                     <tr class="row${status.count % 2}">
